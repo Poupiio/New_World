@@ -13,6 +13,7 @@ a {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     text-transform: uppercase;
     background-color: white;
@@ -52,25 +53,20 @@ li {
 
 
 /* SECTION 1 */
-.s1 {
-    display: flex;
-    justify-content: center;
-    width: 45%;
-    margin-left: 50%;
-    margin-top: 2%;
-    transform: translateX(-50%);
-    align-items: center;
-    border: solid 1px yellow;
-}
-
 h2 {
    text-transform: uppercase;
    text-align: center;
+   margin-top: 3%;
+   margin-bottom: 2%;
 }
 
-p {
+.contenu p {
+    width: 55%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
     text-align: center;
-    width: 100%;
+    margin-bottom: 0;
 }
 
 .btn1 {
@@ -78,11 +74,91 @@ p {
     background-color: orange;
     color: white;
     border-radius: 2px;
-    padding: 8px 15px;
+    padding: 8px 13px;
     display: inline-block;
     text-align: center;
-    width: 15%;
-    margin-left: 50%;
-    margin-top: 2%;
+    width: 8%;
+    margin: 2% auto 5% 50%;
     transform: translateX(-50%);
+}
+
+.btn1:hover {
+    border: solid 1p white;
+    background-color: white;
+    color: orange;
+    border-radius: 2px;
+    padding: 8px 13px;
+    display: inline-block;
+    text-align: center;
+    width: 8%;
+    margin: 2% auto 5% 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+
+/* SECTION 2 */
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.box {
+    width: 30%;
+    margin-right: 3%;
+}
+
+h3 {
+    text-transform: uppercase;
+    margin-bottom: 2%;
+}
+
+.box img {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.bgc {
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.bgc h4, .bgc p {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.bgc p {
+    padding-bottom: 25%;
+}
+
+
+
+
+/* FOOTER */
+.end ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+
+.end li, .end a {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.img-footer {
+    width: 30%;
 }
