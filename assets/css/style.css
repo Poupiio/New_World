@@ -3,42 +3,79 @@
     src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
-body {
+/********************* CSS DE BASE *********************/
+
+* {
     margin: 0;
-    font-family: "Roboto";
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* NAV BAR LISTE */
+body {
+    font-family: "Roboto";
+    
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+h4 {
+    padding: 0.5rem 0 1rem;
+}
+
 a {
     text-decoration: none;
+}
+
+.btn {
+    background-color: #FFB826;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: 1px solid #FFB826;
+    border-radius: 3px;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #FFB826;
+}
+
+
+/********************* NAV BAR *********************/
+
+.nav-bar a {
     color: black;
+    padding: 1rem;
 }
 
 .nav-bar ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
     text-transform: uppercase;
     background-color: white;
+    padding: 1.5rem 0;
 }
 
 li {
-    margin-left: 20px;
     font-weight: 600;
-    padding-right: 15px;
-    padding-top: 5px;
 }
 
 li:not(:last-child) {
     border-right: solid 1px black;
 }
 
-/* NAV BAR IMG + TITRE */
+/********************* BANNER *********************/
 .banner {
     width: 100%;
-    height: 400px;
+    height: 60vh;
     background-image: url("/assets/img/new-world-amazon-jeu.jpg");
     background-size: cover;
     background-position: center;
@@ -63,71 +100,42 @@ li:not(:last-child) {
 }
 
 
-/* SECTION 1 */
-h2 {
-   text-transform: uppercase;
-   text-align: center;
-   margin-top: 3%;
-   margin-bottom: 2%;
-}
+/********************* section #content *********************/
 
-.contenu p {
-    width: 55%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    align-items: center;
+#content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 3rem 0;
     text-align: center;
-    margin-bottom: 0;
 }
 
-.btn1 {
-    border: solid 1p orange;
-    background-color: orange;
-    color: white;
-    border-radius: 2px;
-    padding: 8px 13px;
-    display: inline-block;
+#content p {
+    margin: 2rem 0;
+}
+
+
+/********************* section #actu *********************/
+
+#actu h2 {
     text-align: center;
-    width: 8%;
-    margin: 2% auto 5% 50%;
-    transform: translateX(-50%);
+    margin: 4rem 0 3rem;
 }
-
-.btn1:hover {
-    border: solid 1p white;
-    background-color: white;
-    color: orange;
-    border-radius: 2px;
-    padding: 8px 13px;
-    display: inline-block;
-    text-align: center;
-    width: 8%;
-    margin: 2% auto 5% 50%;
-    transform: translateX(-50%);
-    transition: 0.3s;
-}
-
-
-/* SECTION 2 */
 
 .container {
     display: flex;
     justify-content: center;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto 5rem;
     width: 65%;
-    margin-bottom: 5%;
 }
 
 .box {
     width: 30%;
+}
+
+.box:not(:last-child) {
     margin-right: 3%;
 }
 
-h3 {
-    text-transform: uppercase;
-    margin-bottom: 2%;
-}
 
 .box img {
     width: 100%;
@@ -150,9 +158,7 @@ h3 {
 }
 
 
-
-
-/* FOOTER */
+/********************* FOOTER *********************/
 footer {
     background-color: black;
     display: flex;
@@ -160,28 +166,38 @@ footer {
     justify-content: space-evenly;
 }
 
-.img {
-    width: 4%;
-    padding: 1% 0;
+footer img {
+    width: 6%;
+    padding: 1rem;
 }
 
-.flex {
+footer .footer-menu {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.flex li a {
+footer .footer-menu li a {
     color: white;
     list-style: none;
     font-weight: 400;
-    font-size: 0.8rem;
-    align-content: center;
+    padding: 0 1rem;
 }
 
-.flex li:not(:last-child) {
+footer .footer-menu li:not(:last-child) {
     border-right: solid 1px white;
 }
 
-nav {
-    margin-top: 10px;
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 910px){
+    .banner h1 {
+        text-align: center;
+    }
+
+    .box {
+        width: 40%;
+    }
 }
